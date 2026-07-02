@@ -61,71 +61,92 @@ export function Advantages() {
       industry: '跨境电商',
       desc: '杭州跨境电商客户落地海南园区',
       result: '年综合减负 120万',
+      icon: '🌎',
     },
     {
       industry: '生产企业',
       desc: '生产企业高薪架构优化',
       result: '个税成本降低 18%',
+      icon: '🏭',
     },
     {
       industry: '初创公司',
       desc: '一站式注册+记账',
       result: '3天完成开业',
+      icon: '🚀',
     },
   ];
 
   return (
-    <section id="advantages" className="py-20 lg:py-28 bg-[#FAFBFC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section title */}
+    <section id="advantages" className="relative py-20 lg:py-28 overflow-hidden">
+      {/* Background - bold navy with texture */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A1F33] via-navy to-[#0D2A42]" />
+      <div className="absolute inset-0 hero-grid opacity-40" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-pine/8 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section title - white on dark */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-navy/10 text-navy text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-gold/15 text-gold-light text-sm font-bold rounded-full mb-4 border border-gold/20">
             核心优势
           </span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-navy">
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-white">
             六大优势 · 值得信赖
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-white/50 max-w-2xl mx-auto">
             10年深耕财税领域，用专业与诚信为3000+企业保驾护航
           </p>
           <div className="section-divider mt-6" />
         </div>
 
-        {/* Advantages grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {advantages.map((item) => (
+        {/* Advantages grid - cards on dark */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {advantages.map((item, idx) => (
             <div
               key={item.title}
-              className="group p-6 bg-white rounded-2xl border border-border/50 hover:border-pine/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group p-6 rounded-2xl bg-white/[0.06] border border-white/10 hover:border-gold/30 hover:bg-white/[0.10] transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-12 h-12 rounded-xl bg-pine/10 text-pine flex items-center justify-center group-hover:bg-pine group-hover:text-white transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pine to-pine-light text-white flex items-center justify-center shadow-lg shadow-pine/20 group-hover:shadow-pine/40 transition-shadow">
                 {item.icon}
               </div>
-              <h3 className="mt-4 text-lg font-bold text-navy">{item.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              <h3 className="mt-4 text-lg font-extrabold text-white">{item.title}</h3>
+              <p className="mt-2 text-sm text-white/55 leading-relaxed">{item.desc}</p>
+              {/* Number accent */}
+              <div className="mt-4 text-3xl font-black text-white/[0.04] absolute top-4 right-6 select-none">
+                0{idx + 1}
+              </div>
             </div>
           ))}
         </div>
 
         {/* Case highlights */}
         <div className="mt-16">
-          <h3 className="text-center text-xl font-bold text-navy mb-8">客户实效案例</h3>
+          <h3 className="text-center text-xl font-extrabold text-white mb-8">客户实效案例</h3>
           <div className="grid sm:grid-cols-3 gap-6">
             {cases.map((item) => (
               <div
                 key={item.industry}
-                className="relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-navy to-navy-light text-white group hover:shadow-xl hover:shadow-navy/20 transition-all duration-300"
+                className="relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.03] border border-white/10 text-white group hover:border-gold/30 transition-all duration-300"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-                <span className="inline-block px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full mb-3">
+                <div className="absolute top-0 right-0 w-28 h-28 bg-gold/5 rounded-full -translate-y-1/3 translate-x-1/3" />
+                <div className="text-3xl mb-3">{item.icon}</div>
+                <span className="inline-block px-3 py-1 bg-gold/15 text-gold-light text-xs font-bold rounded-full mb-3 border border-gold/15">
                   {item.industry}
                 </span>
-                <p className="text-white/70 text-sm">{item.desc}</p>
-                <p className="mt-3 text-2xl font-bold text-gold-light">{item.result}</p>
+                <p className="text-white/60 text-sm">{item.desc}</p>
+                <p className="mt-3 text-2xl font-extrabold text-gold-light">{item.result}</p>
               </div>
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Bottom transition */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 60" fill="none" className="w-full">
+          <path d="M0 60L0 30L480 0L960 40L1440 15L1440 60L0 60Z" fill="white" />
+        </svg>
       </div>
     </section>
   );

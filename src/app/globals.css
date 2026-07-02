@@ -55,6 +55,7 @@
   /* Brand colors */
   --color-pine: #1B6B4A;
   --color-pine-light: #2A8F65;
+  --color-pine-dark: #145238;
   --color-navy: #0F2B46;
   --color-navy-light: #1A3A5C;
   --color-gold: #C8983E;
@@ -149,46 +150,88 @@ html {
 /* Pine tree line decoration */
 .pine-line {
   position: relative;
+  padding-left: 20px;
 }
 
-.pine-line::after {
+.pine-line::before {
   content: '';
   position: absolute;
-  bottom: -8px;
   left: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #1B6B4A, #C8983E);
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background: linear-gradient(180deg, #1B6B4A, #C8983E);
   border-radius: 2px;
 }
 
 /* Section divider */
 .section-divider {
   width: 60px;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(90deg, #1B6B4A, #C8983E);
   border-radius: 2px;
   margin: 0 auto;
 }
 
-/* Hero background pattern */
-.hero-pattern {
-  background-image: radial-gradient(circle at 20% 50%, rgba(27, 107, 74, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(200, 152, 62, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 60% 80%, rgba(15, 43, 70, 0.05) 0%, transparent 50%);
+/* Hero geometric grid pattern */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-/* Subtle grain texture overlay */
-.grain-overlay {
+/* Diagonal section transition */
+.diagonal-top {
   position: relative;
 }
 
-.grain-overlay::before {
+.diagonal-top::before {
   content: '';
   position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+  top: -60px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: inherit;
+  clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Decorative corner accent */
+.corner-accent {
+  position: relative;
+}
+
+.corner-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top: 3px solid #1B6B4A;
+  border-left: 3px solid #1B6B4A;
+  border-radius: 4px 0 0 0;
+}
+
+.corner-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom: 3px solid #C8983E;
+  border-right: 3px solid #C8983E;
+  border-radius: 0 0 4px 0;
+}
+
+/* Pulse glow for stats */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,152,62,0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(200,152,62,0.15); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
 }
