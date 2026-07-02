@@ -112,10 +112,6 @@ export function Advantages() {
               </div>
               <h3 className="mt-4 text-lg font-extrabold text-white">{item.title}</h3>
               <p className="mt-2 text-sm text-white/55 leading-relaxed">{item.desc}</p>
-              {/* Number accent */}
-              <div className="mt-4 text-3xl font-black text-white/[0.04] absolute top-4 right-6 select-none">
-                0{idx + 1}
-              </div>
             </div>
           ))}
         </div>
