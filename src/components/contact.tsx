@@ -83,78 +83,35 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Consultation form area */}
-          <div className="lg:col-span-3">
-            <div className="p-8 rounded-2xl bg-white border-2 border-gray-100 shadow-xl shadow-gray-100/50 corner-accent">
-              <h3 className="text-xl font-extrabold text-navy mb-2">获取专属财税方案</h3>
-              <p className="text-sm text-foreground/50 mb-8">
-                填写以下信息，我们的财税顾问将在24小时内与您联系
-              </p>
+          {/* CTA area */}
+          <div className="lg:col-span-3 flex items-center">
+            <div className="w-full p-10 rounded-2xl bg-gradient-to-br from-navy via-navy to-navy-light shadow-2xl shadow-navy/20 corner-accent text-center relative overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-pine/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold/10 rounded-full blur-3xl" />
 
-              <div className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-bold text-navy mb-2">
-                      姓名 <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="请输入您的姓名"
-                      className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 bg-white text-sm font-medium focus:outline-none focus:ring-0 focus:border-pine transition-all duration-200 placeholder:text-foreground/30"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-navy mb-2">
-                      联系电话 <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      placeholder="请输入您的联系电话"
-                      className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 bg-white text-sm font-medium focus:outline-none focus:ring-0 focus:border-pine transition-all duration-200 placeholder:text-foreground/30"
-                    />
-                  </div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pine to-pine-light flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pine/30">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
                 </div>
-
-                <div>
-                  <label className="block text-sm font-bold text-navy mb-2">企业名称</label>
-                  <input
-                    type="text"
-                    placeholder="请输入您的企业名称"
-                    className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 bg-white text-sm font-medium focus:outline-none focus:ring-0 focus:border-pine transition-all duration-200 placeholder:text-foreground/30"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-bold text-navy mb-2">咨询服务</label>
-                  <div className="flex flex-wrap gap-2">
-                    {['代理记账', '税务合规', '海南园区', '主播财税', 'ODI跨境', '其他'].map(
-                      (item) => (
-                        <span
-                          key={item}
-                          className="px-4 py-2.5 text-sm font-medium rounded-xl border-2 border-gray-200 text-foreground/60 cursor-pointer hover:border-pine/40 hover:text-pine hover:bg-pine/5 transition-all duration-200"
-                        >
-                          {item}
-                        </span>
-                      )
-                    )}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-bold text-navy mb-2">补充说明</label>
-                  <textarea
-                    rows={3}
-                    placeholder="请简要描述您的财税需求..."
-                    className="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 bg-white text-sm font-medium focus:outline-none focus:ring-0 focus:border-pine transition-all duration-200 resize-none placeholder:text-foreground/30"
-                  />
-                </div>
-
-                <button className="w-full py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/30 transition-all duration-300 hover:-translate-y-0.5 text-base">
-                  提交咨询
-                </button>
-
-                <p className="text-xs text-foreground/30 text-center">
-                  提交即表示同意我们的隐私政策，您的信息将被严格保密
+                <h3 className="text-2xl lg:text-3xl font-extrabold text-white mb-3">
+                  获取专属财税方案
+                </h3>
+                <p className="text-white/60 mb-8 max-w-md mx-auto">
+                  专业财税顾问一对一沟通，为您量身定制合规节税方案
+                </p>
+                <a
+                  href="https://opc.yikesong66.com/#/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-10 py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/40 transition-all duration-300 hover:-translate-y-1 text-lg"
+                >
+                  立即咨询
+                </a>
+                <p className="text-white/30 text-sm mt-5">
+                  全年7×12小时在线 · 税务突发4小时紧急对接
                 </p>
               </div>
             </div>
