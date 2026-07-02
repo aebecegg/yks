@@ -1,58 +1,31 @@
 import type { Metadata } from 'next';
-import { Inspector } from 'react-dev-inspector';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: '新应用 | 扣子编程',
-    template: '%s | 扣子编程',
+    default: '一棵松财税 | 企业财税合规全案服务',
+    template: '%s | 一棵松财税',
   },
   description:
-    '扣子编程是一款一站式云端 Vibe Coding 开发平台。通过对话轻松构建智能体、工作流和网站，实现从创意到上线的无缝衔接。',
+    '杭州一棵松企业管理有限公司，深耕财税服务10年，服务企业3000+家。提供代理记账、税务合规、海南园区招商返税、主播财税合规等一站式全案服务。TSC5级涉税服务机构，信用排名33。',
   keywords: [
-    '扣子编程',
-    'Coze Code',
-    'Vibe Coding',
-    'AI 编程',
-    '智能体搭建',
-    '工作流搭建',
-    '网站搭建',
-    '网站部署',
-    '全栈开发',
-    'AI 工程师',
+    '一棵松财税',
+    '代理记账',
+    '税务合规',
+    '海南园区',
+    '主播财税',
+    '杭州财税公司',
+    '企业税务筹划',
+    'ODI跨境投资',
+    '财税全案服务',
   ],
-  authors: [{ name: 'Coze Code Team', url: 'https://code.coze.cn' }],
-  generator: 'Coze Code',
-  // icons: {
-  //   icon: '',
-  // },
+  authors: [{ name: '杭州一棵松企业管理有限公司' }],
   openGraph: {
-    title: '扣子编程 | 你的 AI 工程师已就位',
+    title: '一棵松财税 | 企业财税合规全案服务',
     description:
-      '我正在使用扣子编程 Vibe Coding，让创意瞬间上线。告别拖拽，拥抱心流。',
-    url: 'https://code.coze.cn',
-    siteName: '扣子编程',
+      '深耕财税服务10年，服务企业3000+家。代理记账、税务合规、海南园区招商返税、主播财税合规一站式全案。',
     locale: 'zh_CN',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: '扣子编程 - 你的 AI 工程师',
-    //   },
-    // ],
-  },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Coze Code | Your AI Engineer is Here',
-  //   description:
-  //     'Build and deploy full-stack applications through AI conversation. No env setup, just flow.',
-  //   // images: [''],
-  // },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
@@ -61,12 +34,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isDev = process.env.COZE_PROJECT_ENV === 'DEV';
-
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
-        {isDev && <Inspector />}
+    <html lang="zh-CN">
+      <body className="antialiased bg-[#FAFBFC] text-[#1A1A2E] font-sans">
         {children}
       </body>
     </html>
