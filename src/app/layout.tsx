@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import CustomerServiceWidget from '@/components/customer-service-widget';
 
 export const metadata: Metadata = {
   title: {
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className="antialiased bg-[#FAFBFC] text-[#1A1A2E] font-sans">
         {children}
+        <CustomerServiceWidget />
       </body>
     </html>
   );
