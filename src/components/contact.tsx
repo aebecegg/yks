@@ -90,39 +90,29 @@ export function Contact() {
               <div className="absolute top-0 right-0 w-40 h-40 bg-pine/10 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold/10 rounded-full blur-3xl" />
 
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                {/* Left: QR Code */}
-                <div className="shrink-0">
-                  <div className="w-44 h-44 rounded-xl bg-white p-2 shadow-xl shadow-black/20">
-                    <img
-                      src="/qrcode-service.jpg"
-                      alt="扫码添加客服"
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                  <p className="text-white/50 text-xs mt-3">扫码添加智能客服</p>
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pine to-pine-light flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pine/30">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
                 </div>
-
-                {/* Right: Text + Button */}
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl lg:text-3xl font-extrabold text-white mb-3">
-                    获取专属财税方案
-                  </h3>
-                  <p className="text-white/60 mb-8 max-w-md">
-                    专业财税顾问一对一沟通，为您量身定制合规节税方案
-                  </p>
-                  <a
-                    href="https://opc.yikesong66.com/#/contact"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-10 py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/40 transition-all duration-300 hover:-translate-y-1 text-lg"
-                  >
-                    立即咨询
-                  </a>
-                  <p className="text-white/30 text-sm mt-5">
-                    全年7×12小时在线 · 税务突发4小时紧急对接
-                  </p>
-                </div>
+                <h3 className="text-2xl lg:text-3xl font-extrabold text-white mb-3">
+                  获取专属财税方案
+                </h3>
+                <p className="text-white/60 mb-8 max-w-md mx-auto">
+                  专业财税顾问一对一沟通，为您量身定制合规节税方案
+                </p>
+                <a
+                  href="https://opc.yikesong66.com/#/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-10 py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/40 transition-all duration-300 hover:-translate-y-1 text-lg"
+                >
+                  立即咨询
+                </a>
+                <p className="text-white/30 text-sm mt-5">
+                  全年7×12小时在线 · 税务突发4小时紧急对接
+                </p>
               </div>
             </div>
           </div>
