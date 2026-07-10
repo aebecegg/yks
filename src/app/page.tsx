@@ -7,6 +7,7 @@ import { Qualifications } from '@/components/qualifications';
 import { FAQ } from '@/components/faq';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
+import FloatingSidebar from '@/components/floating-sidebar';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <FloatingSidebar />
     </>
   );
 }
