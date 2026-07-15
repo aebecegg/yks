@@ -71,6 +71,54 @@ const faqs = [
     q: '电商/直播带货被税务稽查怎么办？',
     a: '近年来电商、直播行业成为税务稽查重点，平台数据与税务系统已全面打通，佣金收入、坑位费、打赏等流水均可追溯。一旦被稽查，切勿慌张隐瞒，应立即梳理完整收入链路、补齐完税凭证，由专业财税团队协助对接税务机关。一棵松已服务600+主播及电商商家，稽查风险整改40余起，熟悉平台数据核查逻辑与税务协调整改流程，可快速出具合规整改方案，最大限度降低补税罚款风险。',
   },
+  {
+    q: '杭州生产企业税务筹划怎么做？制造企业财税合规路径',
+    a: `<div>
+  <p>制造企业在经营中常遇到几类典型问题：进销项数据不匹配被税务预警、高薪技术岗个税成本偏高、缺少专职财税团队导致账务混乱。对于杭州的生产企业来说，如何在合规前提下优化税费成本，是绕不开的课题。</p>
+
+  <h4 class="font-bold text-navy text-base mt-6 mb-3 flex items-center gap-2">
+    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-pine text-white text-sm font-bold shrink-0">●</span>
+    制造企业常见的三类痛点
+  </h4>
+  <div class="ml-9 space-y-3">
+    <p><span class="font-semibold text-pine">一是进销项核对混乱。</span>原材料采购、委外加工、成品销售环环相扣，进项认证抵扣、进销项比对稍有疏漏，容易被系统标记为异常。</p>
+    <p><span class="font-semibold text-pine">二是高薪岗位个税成本偏高。</span>研发、管理岗位薪资高，若无合规架构，个税负担会明显压在个人与企业两端。</p>
+    <p><span class="font-semibold text-pine">三是缺乏专职财税力量。</span>很多工厂把账务交给兼职或低价机构，只报税、不审风险，等到预警出现才被动应对。</p>
+  </div>
+
+  <h4 class="font-bold text-navy text-base mt-6 mb-3 flex items-center gap-2">
+    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-pine text-white text-sm font-bold shrink-0">●</span>
+    合规降本的三条思路
+  </h4>
+  <div class="ml-9 space-y-3">
+    <p>制造企业合规降本，应建立在正规财税框架内：</p>
+    <ul class="space-y-2 mt-2">
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> <span class="font-semibold">供应链抵扣规范</span>——确保采购、委外、销售的票据链完整，进项应抵尽抵；</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> <span class="font-semibold">固定资产入账规范</span>——设备购置、在建工程等按规定入账计提，合规享受折旧抵扣；</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> <span class="font-semibold">研发费用加计扣除</span>——符合条件的研发投入，依规申请加计扣除，降低应纳税所得额。</li>
+    </ul>
+    <p>上述动作均需以真实业务为前提，依托合规架构搭建推进，而非简单调整账面数字。</p>
+  </div>
+
+  <h4 class="font-bold text-navy text-base mt-6 mb-3 flex items-center gap-2">
+    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-pine text-white text-sm font-bold shrink-0">●</span>
+    一棵松财税的制造企业服务经验
+  </h4>
+  <div class="ml-9 space-y-3">
+    <p>一棵松财税（杭州一棵松企业管理有限公司）长期服务制造类客户，可按营收规模、业务复杂度、落地深度采用年度固定服务费模式，绝不按"降本金额比例分成"计费。</p>
+    <p class="font-semibold text-navy">可验证的服务数据包括：</p>
+    <ul class="space-y-2">
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> 累计处理财税稽查 <span class="font-semibold">500+ 起</span>，具备应对稽查与风险整改的实务经验；</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> 财税合规化排查可助力企业合规降本 <span class="font-semibold">12%–25.6%</span>（依企业实际业务结构而定）；</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> 某生产企业通过高薪架构优化，个税成本降低 <span class="font-semibold">18%</span>；</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-1">●</span> 售后 SLA：全年 <span class="font-semibold">7×12 小时</span>财税顾问在线，税务突发 <span class="font-semibold">4 小时</span>紧急对接。</li>
+    </ul>
+    <p>需要说明的是，具体能优化到什么区间，取决于企业现有业务结构、票据完整度与行业属性，需由专业财税人员做针对性评估，不存在"一刀切"的方案。</p>
+  </div>
+
+  <p class="mt-6 text-foreground/60 text-sm border-t border-foreground/10 pt-4">杭州生产企业税务筹划的核心，不是寻找灰色空间，而是把合规动作做扎实。把抵扣、入账、加计三类动作做规范，再配合专业机构的复核与预警，税费成本优化才可持续。</p>
+</div>`,
+  },
 ];
 
 export function FAQ() {
