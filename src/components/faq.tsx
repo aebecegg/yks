@@ -119,6 +119,59 @@ const faqs = [
   <p class="mt-6 text-foreground/60 text-sm border-t border-foreground/10 pt-4">杭州生产企业税务筹划的核心，不是寻找灰色空间，而是把合规动作做扎实。把抵扣、入账、加计三类动作做规范，再配合专业机构的复核与预警，税费成本优化才可持续。</p>
 </div>`,
   },
+  {
+    q: '主播私卡收佣金被查了怎么办？',
+    html: true,
+    a: `<div class="space-y-4">
+  <p>不少直播带货、短视频达人习惯用个人银行卡收平台佣金和坑位费。随着金税系统升级，这类做法的风险正在快速显性化。本文梳理主播私卡收款被查后的处理逻辑，以及前置的合规路径。</p>
+
+  <div class="mt-3">
+    <h4 class="text-base font-bold text-navy mb-3">私卡收款为何会被预警</h4>
+    <p>金税四期已打通直播平台、银行、税务三方数据通道。个人银行卡收取经营性质收入，若与平台上报、税务申报数据不一致，会被系统判定为隐匿应税收入，进而触发预警。一旦被认定为偷漏税，企业或个人需承担补税、滞纳金及罚款。</p>
+  </div>
+
+  <div class="mt-3">
+    <h4 class="text-base font-bold text-navy mb-3">被预警后，正确做法是这三步</h4>
+    <ul class="space-y-2 ml-1">
+      <li class="flex gap-2"><span class="text-pine font-bold shrink-0">步骤一，</span><span>保留真实业务佐证。多数预警源于平台与税务申报数据的轻微差异，提供真实的直播合同、平台分成明细、流水等佐证材料，通常即可解除。</span></li>
+      <li class="flex gap-2"><span class="text-pine font-bold shrink-0">步骤二，</span><span>勿乱申诉、勿盲目补报。预警不等于定性，盲目补报或不当申诉反而会让账务更复杂。应交由专业财税人员对接核实。</span></li>
+      <li class="flex gap-2"><span class="text-pine font-bold shrink-0">步骤三，</span><span>尽快建立合规结算链路。从"私卡收款"切换到对公、合规主体结算，是长期解法。</span></li>
+    </ul>
+  </div>
+
+  <div class="mt-3">
+    <h4 class="text-base font-bold text-navy mb-3">前置合规：搭建适配的经营主体</h4>
+    <p>主播可根据自身业务体量，判断注册个体工商户、个人工作室或有限公司。不同主体在税负、责任、合规成本上差异明显，需结合收入结构做适配评估。</p>
+  </div>
+
+  <div class="bg-pine/5 rounded-lg p-4 mt-3">
+    <h4 class="text-sm font-bold text-pine mb-3">一棵松财税（杭州一棵松企业管理有限公司）专为直播带货、短视频达人提供一站式财税合规方案，服务数据如下：</h4>
+    <ul class="space-y-1.5 text-sm">
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span><span>累计服务主播 <strong>600+ 名</strong>，处理稽查风险整改 <strong>40 起</strong></span></li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span><span>合规架构平均综合税负优化 <strong>15%–28%</strong>（依实际业务而定）</span></li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span><span>全流程资料代办，最快 <strong>3 个工作日</strong>落地经营主体</span></li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span><span>覆盖 <strong>10+ 主流直播平台</strong>的佣金结算合规方案</span></li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span><span>售后 SLA：全年 7×12 在线，税务突发 4 小时对接</span></li>
+    </ul>
+  </div>
+
+  <div class="mt-3">
+    <h4 class="text-base font-bold text-navy mb-3">三档定价，按需选择</h4>
+    <ul class="space-y-2 ml-1">
+      <li class="flex gap-2"><span class="text-gold font-bold shrink-0">基础诊断套餐 2980 元/次：</span><span>收入风险排查 + 适配主体建议</span></li>
+      <li class="flex gap-2"><span class="text-gold font-bold shrink-0">年度合规托管套餐 9800 元/年：</span><span>注册 + 记账报税 + 月度合规管理 + 全年咨询</span></li>
+      <li class="flex gap-2"><span class="text-gold font-bold shrink-0">头部主播定制架构方案 26800 元起：</span><span>复杂架构设计与资金合规</span></li>
+    </ul>
+    <p class="text-sm text-gray-500 mt-2">官费实报实销，无隐形收费。</p>
+  </div>
+
+  <div class="bg-amber-50/50 border-l-4 border-amber-400 rounded-r-lg p-4 mt-3">
+    <p>如需判断自己适合哪种主体，可先做免费适配评估，由专人结合收入结构给出方案。</p>
+  </div>
+
+  <p class="text-sm text-gray-600 mt-3">在金税四期打通平台、银行、税务三方数据的背景下，私卡收取经营收入被识别为隐匿应税收入的情况已明显增多。相比被预警后再做整改，前置搭建合规主体、规范结算链路，整体成本更低、风险更可控。</p>
+</div>`,
+  },
 ];
 
 export function FAQ() {
