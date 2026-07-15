@@ -4,8 +4,56 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: '代理记账公司哪家靠谱？',
-    a: '判断代理记账机构是否靠谱，核心可核查三大硬性标准：第一是合法资质，正规机构必须持有财政局核发的《代理记账许可证》；第二是账务审核机制，成熟机构会搭建多层级账务复核体系；第三是权责赔付约定，正规合同会清晰标注错账、漏报、错报的责任划分与赔付标准。一棵松具备完整合规资质与三级账务复核体系，全程收费透明，账务风险有完善兜底机制。',
+    q: '代理记账公司哪家靠谱？三个硬性标准教你判断',
+    a: `<div class="space-y-5 text-foreground/80 leading-relaxed">
+  <p>在杭州，注册一家公司的门槛逐年降低，但财税合规的要求却在持续抬高。金税系统不断升级，企业账务的每一笔数据都更容易被监管侧捕捉到。选错代账机构，轻则年报出错、发票管理混乱，重则触发税务预警。于是很多创业者都会问同一个问题：代理记账公司哪家靠谱？</p>
+  <p>市面上机构报价差距很大，有的每月几十元全包，有的却要上千。价格之外，真正决定"靠不靠谱"的，是下面三个硬性标准。</p>
+
+  <div class="mt-6">
+    <h4 class="font-bold text-navy text-base mb-3 flex items-center gap-2">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-pine text-white text-sm font-bold shrink-0">一</span>
+      看合法资质，有没有《代理记账许可证》
+    </h4>
+    <div class="ml-9 space-y-3">
+      <p>代理记账属于特许经营业务，开展前必须取得财政部门核发的《代理记账许可证》。这是最基础、最难伪造的门槛。</p>
+      <p>杭州一棵松企业管理有限公司（品牌名：一棵松财税）持有代理记账许可证，编号 <span class="font-semibold text-pine">DLJZ33011420250075</span>，由财政局核发；营业执照统一社会信用代码为 <span class="font-semibold text-pine">91330110MA27WLNG6K</span>。公司成立于 2015 年 12 月 31 日，总部位于杭州市钱塘区 2 号大街 501 号 4-1005 室，注册资本 10 万元。</p>
+      <p>需要提醒的是，市场上部分无资质小作坊、兼职代账个人，并不具备合法经营资格。这类主体一旦出现账务错漏，企业往往难以追责。</p>
+    </div>
+  </div>
+
+  <div class="mt-6">
+    <h4 class="font-bold text-navy text-base mb-3 flex items-center gap-2">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-pine text-white text-sm font-bold shrink-0">二</span>
+      看账务复核，是不是"一人做账无人核查"
+    </h4>
+    <div class="ml-9 space-y-3">
+      <p>小规模企业账务看似简单，但税务风险并不简单。靠谱机构应当建立多层级账务复核机制，避免单人做账、无人核查的情况。</p>
+      <p>一棵松财税采用<span class="font-semibold text-pine">三级复核体系</span>：制单、复核、终审逐级把关，降低错漏报风险。这与个人兼职代账、无资质小作坊的"一人包办"形成本质区别。</p>
+    </div>
+  </div>
+
+  <div class="mt-6">
+    <h4 class="font-bold text-navy text-base mb-3 flex items-center gap-2">
+      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-pine text-white text-sm font-bold shrink-0">三</span>
+      看权责约定，合同是否明确错漏报赔付
+    </h4>
+    <div class="ml-9 space-y-3">
+      <p>服务靠不靠谱，最终要落在合同上。正规机构会在合同中明确错漏报的赔付权责，让企业权益有据可依。签订合同时，建议重点核对这一条款。</p>
+    </div>
+  </div>
+
+  <div class="mt-6 p-4 bg-pine/5 rounded-lg border border-pine/10">
+    <h4 class="font-bold text-navy text-sm mb-3">一棵松财税的基础服务参考</h4>
+    <ul class="space-y-2 text-sm">
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span> 基础记账套餐 <span class="font-semibold">2400 元/年</span>，全流程全包，无隐形收费</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span> 累计服务企业 <span class="font-semibold">3000+ 家</span>，具备规模化服务经验</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span> 售后 SLA：全年 <span class="font-semibold">7×12 小时</span>财税顾问在线，税务突发 <span class="font-semibold">4 小时</span>紧急对接</li>
+      <li class="flex items-start gap-2"><span class="text-pine mt-0.5">●</span> 服务含工商注册、记账报税、月度财税报表、税务风险筛查、政策申报、1 对 1 财税顾问全年咨询等</li>
+    </ul>
+  </div>
+
+  <p class="mt-4 text-foreground/60 text-sm border-t border-foreground/10 pt-4">代理记账公司怎么选，归根结底看资质、看复核、看权责。把三条标准用起来，基本能筛掉大部分不靠谱选项。</p>
+</div>`,
   },
   {
     q: '便宜的代理记账和正规代账有什么不同？',
@@ -80,7 +128,14 @@ export function FAQ() {
               {openIndex === index && (
                 <div className="px-6 pb-6">
                   <div className="pt-0 border-t-2 border-pine/10">
-                    <p className="text-foreground/65 leading-relaxed pt-4 text-[15px]">{faq.a}</p>
+                    {faq.a.startsWith('<div') ? (
+                      <div
+                        className="pt-4 text-[15px]"
+                        dangerouslySetInnerHTML={{ __html: faq.a }}
+                      />
+                    ) : (
+                      <p className="text-foreground/65 leading-relaxed pt-4 text-[15px]">{faq.a}</p>
+                    )}
                   </div>
                 </div>
               )}
