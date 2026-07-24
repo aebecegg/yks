@@ -87,7 +87,7 @@ export function Contact() {
 
           {/* CTA area */}
           <div className="lg:col-span-3 flex items-center">
-            <div className="w-full p-10 rounded-2xl bg-gradient-to-br from-navy via-navy to-navy-light shadow-2xl shadow-navy/20 corner-accent text-center relative overflow-hidden">
+            <div className="w-full p-10 rounded-2xl bg-gradient-to-br from-navy via-navy to-navy-light shadow-2xl shadow-navy/20 corner-accent text-center relative">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-pine/10 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold/10 rounded-full blur-3xl" />
@@ -123,7 +123,7 @@ export function Contact() {
                       扫码咨询
                     </button>
                     {/* QR Code Popup - appears on hover */}
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <div className="bg-white rounded-2xl shadow-2xl shadow-navy/20 p-6 border-2 border-pine/20 w-64">
                         <div className="text-center">
                           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pine to-pine-light flex items-center justify-center mx-auto mb-3">

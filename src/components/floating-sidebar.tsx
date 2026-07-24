@@ -50,12 +50,12 @@ export default function FloatingSidebar() {
               onClick={handleOpenChat}
               className="w-10 h-10 bg-pine rounded-full flex items-center justify-center hover:scale-110 transition-transform"
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
               </svg>
             </button>
             <span className="text-xs text-pine font-semibold writing-mode-vertical">
-              AI客服
+              智能客服
             </span>
           </div>
         )}
@@ -63,7 +63,7 @@ export default function FloatingSidebar() {
         {/* 展开状态：说明 + 按钮 */}
         {isHovered && (
           <div className="flex flex-col items-center gap-3">
-            <h4 className="text-base font-bold text-navy">AI 智能客服</h4>
+            <h4 className="text-base font-bold text-navy">智能客服</h4>
             <p className="text-xs text-gray-600 text-center leading-relaxed">
               7×24小时在线<br />
               产品、服务、品牌问题随时问
