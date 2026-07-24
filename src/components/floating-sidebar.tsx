@@ -45,7 +45,7 @@ export default function FloatingSidebar() {
       >
         {/* 收起状态：图标 + 文字 */}
         {!isHovered && (
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-0.5">
             <button
               onClick={handleOpenChat}
               className="w-10 h-10 bg-pine rounded-full flex items-center justify-center hover:scale-110 transition-transform"
