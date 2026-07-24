@@ -135,7 +135,7 @@ export function Contact() {
                           <p className="text-foreground/40 text-xs mb-4">7×12小时在线响应</p>
                           <div className="bg-gray-50 rounded-xl p-3 border border-gray-100">
                             <img
-                              src="/qrcode-wechat.png"
+                              src={`${process.env.NEXT_PUBLIC_ASSET_PREFIX ?? ''}/qrcode-wechat.png`}
                               alt="一棵松财税客服微信二维码"
                               className="w-full h-auto rounded-lg"
                             />
