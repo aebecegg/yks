@@ -55,7 +55,10 @@ export default function FloatingSidebar() {
               </svg>
             </button>
             <span className="text-xs text-pine font-semibold writing-mode-vertical">
-              智能客服
+              智能
+            </span>
+            <span className="text-xs text-pine font-semibold writing-mode-vertical">
+              客服
             </span>
           </div>
         )}
