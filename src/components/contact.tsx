@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 export function Contact() {
+  const [showQRModal, setShowQRModal] = useState(false);
+
   return (
     <section id="contact" className="py-20 lg:py-28 bg-white relative overflow-hidden">
       {/* Background */}
@@ -102,14 +108,25 @@ export function Contact() {
                 <p className="text-white/60 mb-8 max-w-md mx-auto">
                   专业财税顾问一对一沟通，为您量身定制合规节税方案
                 </p>
-                <a
-                  href="https://opc.yikesong66.com/#/contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-10 py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/40 transition-all duration-300 hover:-translate-y-1 text-lg"
-                >
-                  立即咨询
-                </a>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <a
+                    href="https://opc.yikesong66.com/#/contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-8 py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/40 transition-all duration-300 hover:-translate-y-1 text-lg"
+                  >
+                    立即咨询
+                  </a>
+                  <button
+                    onClick={() => setShowQRModal(true)}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur text-white font-bold rounded-xl border-2 border-white/20 hover:bg-white/20 hover:border-gold/50 transition-all duration-300 text-lg"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                    </svg>
+                    扫码咨询
+                  </button>
+                </div>
                 <p className="text-white/30 text-sm mt-5">
                   全年7×12小时在线 · 税务突发4小时紧急对接
                 </p>
@@ -118,6 +135,52 @@ export function Contact() {
           </div>
         </div>
       </div>
+
+      {/* QR Code Modal */}
+      {showQRModal && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
+          onClick={() => setShowQRModal(false)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowQRModal(false)}
+              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+            >
+              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Content */}
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pine to-pine-light flex items-center justify-center mx-auto mb-4 shadow-lg shadow-pine/30">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-extrabold text-navy mb-2">扫码添加客服</h3>
+              <p className="text-sm text-foreground/60 mb-6">
+                微信扫描二维码，获取专属财税方案
+              </p>
+              <div className="w-56 h-56 mx-auto bg-white border-2 border-gray-100 rounded-xl p-3 shadow-inner">
+                <img
+                  src="/qrcode-wechat.png"
+                  alt="微信客服二维码"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="text-xs text-foreground/40 mt-4">
+                7×12小时在线响应 · 税务突发4小时紧急对接
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

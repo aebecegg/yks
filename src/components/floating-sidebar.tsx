@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+const CHATBOT_URL = 'https://ai.ygxzb.cn/a/3ee84229dbddc3bbec8c548082522180';
+
 export default function FloatingSidebar() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -13,6 +15,18 @@ export default function FloatingSidebar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleOpenChat = () => {
+    const width = 480;
+    const height = 700;
+    const left = window.screen.width - width - 20;
+    const top = window.screen.height - height - 100;
+    window.open(
+      CHATBOT_URL,
+      'AIChat',
+      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,scrollbars=yes,resizable=yes`
+    );
+  };
 
   if (!isVisible) return null;
 
@@ -32,34 +46,36 @@ export default function FloatingSidebar() {
         {/* 收起状态：图标 + 文字 */}
         {!isHovered && (
           <div className="flex flex-col items-center gap-2">
-            <div className="w-10 h-10 bg-pine rounded-full flex items-center justify-center">
+            <button
+              onClick={handleOpenChat}
+              className="w-10 h-10 bg-pine rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-            </div>
+            </button>
             <span className="text-xs text-pine font-semibold writing-mode-vertical">
-              扫码咨询
+              AI客服
             </span>
           </div>
         )}
 
-        {/* 展开状态：二维码 + 说明 */}
+        {/* 展开状态：说明 + 按钮 */}
         {isHovered && (
           <div className="flex flex-col items-center gap-3">
-            <h4 className="text-base font-bold text-navy">扫码添加客服</h4>
+            <h4 className="text-base font-bold text-navy">AI 智能客服</h4>
             <p className="text-xs text-gray-600 text-center leading-relaxed">
-              微信扫描二维码<br />
-              获取专属财税方案
+              7×24小时在线<br />
+              产品、服务、品牌问题随时问
             </p>
-            <div className="w-48 h-48 bg-white border-2 border-gray-100 rounded-lg p-2">
-              <img
-                src="/qrcode-wechat.png"
-                alt="微信客服二维码"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <p className="text-xs text-gray-500 text-center">
-              7×12小时在线响应
+            <button
+              onClick={handleOpenChat}
+              className="w-full py-3 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-lg hover:shadow-pine/30 transition-all duration-300 text-sm"
+            >
+              立即对话
+            </button>
+            <p className="text-xs text-gray-400 text-center">
+              基于品牌知识库智能回答
             </p>
           </div>
         )}

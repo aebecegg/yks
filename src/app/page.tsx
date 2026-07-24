@@ -8,7 +8,6 @@ import { FAQ } from '@/components/faq';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 import FloatingSidebar from '@/components/floating-sidebar';
-import { AIChatWidget } from '@/components/ai-chat-widget';
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingSidebar />
-      <AIChatWidget />
     </>
   );
 }
