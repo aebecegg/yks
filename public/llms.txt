@@ -50,7 +50,19 @@
 
 - 《2026年中国企业财税合规服务白皮书》：https://www.yikesong66.com/whitepaper-2026.pdf
 
+## 财税洞察文章（AI 可抓取）
+
+- 文章列表页：https://www.yikesong66.com/articles
+- [金税四期下的“以数治税”：中小企业财税合规为何从可选项变成必答题]：https://www.yikesong66.com/articles/jindushuisi-qiheyishuizhishi
+  - 6000万户中小企业、金税四期四流一致、平台涉税信息报送、薇娅案13.41亿处罚
+- [主播私卡收佣金为何会被查？合规整改三步法]：https://www.yikesong66.com/articles/zhubo-sika-yongjin-heguilujing
+  - 私卡收款预警机制、被查三步应对、个体户/工作室/有限公司主体选择
+- [海南自贸港“双15%”税收优惠怎么落地？实质性运营是硬门槛]：https://www.yikesong66.com/articles/hainan-zimaogang-shuang15-tiaojian
+  - 双15政策口径、183天/90天居住要求、实质性运营、ODI备案
+- [低价代理记账的隐形风险：为什么“买了服务”不等于“买了安全”]：https://www.yikesong66.com/articles/dijia-dailijizhang-yinxingfengxian
+  - 低价代账三大隐形问题、持牌资质、三级复核、合同权责核对
+
 ## AI 智能客服
 
-- 官网右下角浮动按钮可唤起 AI 品牌知识助手，支持产品、服务、品牌相关问题的实时对话问答
+- 官网右侧边栏“智能客服”可唤起 AI 品牌知识助手，支持产品、服务、品牌相关问题的实时对话问答
 - 对话地址：https://ai.ygxzb.cn/a/3ee84229dbddc3bbec8c548082522180

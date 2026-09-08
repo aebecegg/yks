@@ -235,3 +235,77 @@ html {
 .pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
 }
+
+/* Article content typography */
+.article-content {
+  color: #2b3642;
+  line-height: 2;
+  font-size: 1.0625rem;
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0F2B46;
+  margin: 2.75rem 0 1.25rem;
+  padding-left: 0.875rem;
+  border-left: 4px solid #C8983E;
+  line-height: 1.5;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1B6B4A;
+  margin: 2rem 0 1rem;
+  line-height: 1.5;
+}
+
+.article-content p {
+  margin: 1.1rem 0;
+}
+
+.article-content strong {
+  color: #0F2B46;
+  font-weight: 700;
+}
+
+.article-content ul {
+  margin: 1.1rem 0;
+  padding-left: 0.25rem;
+  list-style: none;
+}
+
+.article-content ul li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin: 0.75rem 0;
+}
+
+.article-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  top: 0.75rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #1B6B4A;
+}
+
+.article-content a {
+  color: #1B6B4A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-content .article-source {
+  margin-top: 2.5rem;
+  padding: 1rem 1.25rem;
+  background: #f4f6f8;
+  border-left: 4px solid #C8983E;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.875rem;
+  color: #6B7280;
+  line-height: 1.8;
+}

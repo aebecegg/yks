@@ -18,26 +18,48 @@
 ```
 src/
 ├── app/
-│   ├── globals.css        # 全局样式 + 品牌色彩变量 + 自定义动画
+│   ├── globals.css        # 全局样式 + 品牌色彩变量 + 自定义动画 + 文章排版
 │   ├── layout.tsx         # 根布局，含 SEO metadata
-│   └── page.tsx           # 首页，组装各模块组件
+│   ├── page.tsx           # 首页，组装各模块组件
+│   └── articles/
+│       ├── page.tsx       # 文章列表页 /articles
+│       └── [slug]/page.tsx # 文章详情页（SSG 静态生成 + JSON-LD 结构化数据）
 ├── components/
-│   ├── header.tsx         # 顶部导航栏（响应式+滚动变色）
+│   ├── header.tsx         # 顶部导航栏（响应式+滚动变色，含文章入口）
 │   ├── hero.tsx           # 首屏大图区（品牌标语+数据条）
 │   ├── about.tsx          # 关于我们+发展里程碑+价值观
 │   ├── services.tsx       # 三大核心服务详情卡片
 │   ├── advantages.tsx     # 六大核心优势+客户实效案例
 │   ├── qualifications.tsx # 资质认证展示
 │   ├── faq.tsx            # 常见问题手风琴
-│   ├── contact.tsx        # 联系方式+咨询表单
+│   ├── articles.tsx       # 首页文章洞察板块（最新3篇）
+│   ├── contact.tsx        # 联系方式+CTA+悬停二维码
+│   ├── floating-sidebar.tsx # 右侧浮动栏（智能客服，弹窗外链）
 │   ├── footer.tsx         # 页脚
 │   └── ui/                # shadcn/ui 组件库
 ├── hooks/
 │   └── use-mobile.ts
 ├── lib/
-│   └── utils.ts           # cn() 工具函数
+│   ├── utils.ts           # cn() 工具函数
+│   └── articles.ts        # 文章数据源（标题/摘要/分类/正文HTML）
 └── server.ts
+
+public/                    # 静态资源 + AI 抓取内容化文件
+├── qrcode-wechat.png      # 微信客服二维码
+├── whitepaper-2026.pdf    # 2026年中国企业财税合规服务白皮书
+├── llms.txt               # AI 引擎品牌摘要
+├── llms-full.txt          # AI 引擎完整品牌知识
+├── faq.md                 # FAQ 文档
+└── sitemap.xml            # 站点地图
 ```
+
+## 文章板块规范
+
+- 文章内容集中维护在 `src/lib/articles.ts`，正文用 HTML 字符串存储，排版样式由 globals.css 的 `.article-content` 控制
+- 新增文章：在 articles.ts 的数组中追加一条（slug/title/summary/category/date/tags/content），详情页自动静态生成，无需手动创建路由
+- 文章分类有固定配色映射（categoryColors），新增分类时需在 articles.tsx 和 articles/page.tsx 同步补色
+- 详情页输出 JSON-LD（schema.org Article）结构，利于搜索引擎与 AI 抓取
+- 新增文章后需同步更新 `public/sitemap.xml` 和 `public/llms.txt`
 
 ## 构建与运行
 

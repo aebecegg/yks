@@ -1,27 +1,37 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { label: '首页', href: '#hero' },
-  { label: '关于我们', href: '#about' },
-  { label: '服务项目', href: '#services' },
-  { label: '核心优势', href: '#advantages' },
-  { label: '资质认证', href: '#qualifications' },
-  { label: '联系我们', href: '#contact' },
+  { label: '首页', href: '/#hero' },
+  { label: '关于我们', href: '/#about' },
+  { label: '服务项目', href: '/#services' },
+  { label: '核心优势', href: '/#advantages' },
+  { label: '资质认证', href: '/#qualifications' },
+  { label: '文章洞察', href: '/articles' },
+  { label: '联系我们', href: '/#contact' },
 ];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    if (isHome) {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+    } else {
+      setScrolled(true);
+    }
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHome]);
 
   return (
     <header
@@ -34,7 +44,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2 group">
+          <Link href="/#hero" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-pine to-pine-light flex items-center justify-center">
               <svg
                 viewBox="0 0 24 24"
@@ -60,12 +70,12 @@ export function Header() {
                 YIKESONG FINANCE & TAX
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-white/10 ${
@@ -75,14 +85,14 @@ export function Header() {
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="ml-3 px-5 py-2.5 bg-gradient-to-r from-pine to-pine-light text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-pine/25 transition-all duration-300 hover:-translate-y-0.5"
             >
               免费咨询
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -110,22 +120,22 @@ export function Header() {
         {mobileOpen && (
           <div className="lg:hidden bg-white rounded-2xl shadow-xl mb-4 p-4 border border-border">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className="block px-4 py-3 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted rounded-lg transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
               className="block mt-2 px-4 py-3 bg-gradient-to-r from-pine to-pine-light text-white text-sm font-semibold rounded-lg text-center"
             >
               免费咨询
-            </a>
+            </Link>
           </div>
         )}
       </div>
