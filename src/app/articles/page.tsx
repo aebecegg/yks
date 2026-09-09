@@ -2,11 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { sortedArticles } from '@/lib/articles';
 
+const SITE_URL = 'https://www.yikesong66.com';
+
 export const metadata: Metadata = {
   title: '财税洞察文章 | 一棵松财税',
   description:
     '一棵松财税洞察专栏：金税四期合规指南、主播财税合规、海南自贸港双15政策落地、代理记账选择标准等专业内容，数据均源自官方公开资料。',
   keywords: ['财税文章', '金税四期', '主播财税合规', '海南自贸港', '代理记账', '税务稽查'],
+  alternates: { canonical: `${SITE_URL}/articles`, types: { 'application/rss+xml': `${SITE_URL}/feed.xml` } },
   openGraph: {
     title: '财税洞察文章 | 一棵松财税',
     description:
@@ -25,8 +28,38 @@ const categoryColors: Record<string, string> = {
 export default function ArticlesPage() {
   const list = sortedArticles();
 
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: '一棵松财税·财税洞察文章列表',
+    itemListElement: list.map((article, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      url: `${SITE_URL}/articles/${article.slug}`,
+      name: article.title,
+      description: article.summary,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '首页', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: '财税洞察文章', item: `${SITE_URL}/articles` },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-background pt-16 lg:pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Page header */}
       <section className="relative bg-gradient-to-br from-navy via-navy to-navy-light text-white overflow-hidden">
         <div
