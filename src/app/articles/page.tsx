@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { sortedArticles } from '@/lib/articles';
-
-const SITE_URL = 'https://www.yikesong66.com';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: '财税洞察文章 | 一棵松财税',

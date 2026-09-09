@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { articles, getArticleBySlug, sortedArticles, type Article } from '@/lib/articles';
+import { SITE_URL } from '@/lib/site';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: article.date,
     },
     alternates: {
-      canonical: `https://www.yikesong66.com/articles/${article.slug}`,
+      canonical: `${SITE_URL}/articles/${article.slug}`,
     },
   };
 }
@@ -47,11 +48,11 @@ function ArticleJsonLd({ article }: { article: Article }) {
     publisher: {
       '@type': 'Organization',
       name: '一棵松财税',
-      url: 'https://www.yikesong66.com',
+      url: SITE_URL,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.yikesong66.com/articles/${article.slug}`,
+      '@id': `${SITE_URL}/articles/${article.slug}`,
     },
   };
   return (
