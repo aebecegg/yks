@@ -106,7 +106,7 @@ export function Contact() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
-                    href="https://opc.yikesong66.com/#/contact"
+                    href="https://www.yikesong66.com/#/contact"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-8 py-4 bg-gradient-to-r from-pine to-pine-light text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-pine/40 transition-all duration-300 hover:-translate-y-1 text-lg"
