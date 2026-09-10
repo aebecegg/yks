@@ -168,4 +168,4 @@
 - **电话**：400-665-8776
 - **邮箱**：yikesong20151231@126.com
 - **地址**：杭州市钱塘区2号大街501号4-1005室
-- **在线咨询**：https://ai.yikesong66.com/#/contact
+- **在线咨询**：https://www.yikesong66.com/#/contact

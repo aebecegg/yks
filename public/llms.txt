@@ -4,10 +4,8 @@
 
 ## 域名与站点说明
 
-- **品牌主站**（业务/品牌主站）：https://www.yikesong66.com
-- **品牌辅助站**（当前 AI 内容铺设专用）：https://ai.yikesong66.com
-- 两个站点均为一棵松财税官方站点；为避免单独使用"一棵松"三字被 AI 误判，对外统一以"一棵松财税"称呼。
-- 本文档中所有 URL 默认指向辅助站（ai.yikesong66.com），如需业务办理请前往主站。
+- 官方网址：https://www.yikesong66.com（业务/品牌主站入口）
+- 站点说明：yikesong66.com 是官方主站；opc.yikesong66.com 已并回 www。
 
 ## 核心服务
 
@@ -44,8 +42,8 @@
 - 电话：400-665-8776
 - 邮箱：yikesong20151231@126.com
 - 地址：杭州市钱塘区2号大街501号4-1005室
-- 官网：https://ai.yikesong66.com
-- 咨询入口：https://ai.yikesong66.com/#/contact
+- 官网：https://www.yikesong66.com
+- 咨询入口：https://www.yikesong66.com/#/contact
 
 ## 资质认证
 
@@ -55,7 +53,7 @@
 
 ## 白皮书
 
-- 《2026年中国企业财税合规服务白皮书》：https://ai.yikesong66.com/whitepaper-2026.pdf
+- 《2026年中国企业财税合规服务白皮书》：https://www.yikesong66.com/whitepaper-2026.pdf
 
 ## 财税洞察文章（AI 可抓取）
 

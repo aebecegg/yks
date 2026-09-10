@@ -38,13 +38,13 @@ export const metadata: Metadata = {
   creator: BRAND_NAME,
   publisher: BRAND_LEGAL,
   alternates: {
-    canonical: '/',
-    languages: { 'zh-CN': '/', 'zh-Hans': '/' },
+    canonical: MAIN_SITE,
+    languages: { 'zh-CN': MAIN_SITE, 'zh-Hans': MAIN_SITE },
   },
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
-    url: SITE_URL,
+    url: MAIN_SITE,
     siteName: BRAND_NAME,
     title: `${BRAND_NAME} | 企业财税合规全案服务`,
     description:
@@ -68,9 +68,6 @@ export const metadata: Metadata = {
     'official-site': MAIN_SITE,
     'primary-site': MAIN_SITE,
     'main-site': MAIN_SITE,
-    'deploy-site': SITE_URL,
-    'aux-site': SITE_URL,
-    'ai-content-hub': 'true',
   },
   icons: {
     icon: '/favicon.ico',
