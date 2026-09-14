@@ -53,6 +53,23 @@ public/                    # 静态资源 + AI 抓取内容化文件
 └── sitemap.xml            # 站点地图
 ```
 
+## FAQ 板块规范（核心）
+
+- **单一数据源**：`src/lib/faq-data.ts`，导出 `faqs: FaqItem[]`（`{ q: string, a: string }`），存 12 条最新最全 FAQ
+- **数据流**：
+  - `src/components/faq.tsx`（首页 UI 折叠面板）从 `faq-data.ts` 导入渲染（用 `startsWith('<div')` 自动判断 HTML/纯文本）
+  - `src/app/page.tsx`（首页 JSON-LD）从 `faq-data.ts` 提取 12 条转 `Question/Answer`（自动剥 HTML 标签成纯文本）
+  - `public/faq.md`（AI 引擎抓取文档）从 `faq-data.ts` 重新生成
+- **HTML 格式约定**：`a` 字段以 `<div>...</div>` 切段，`<strong>Xxx</strong>` 转粗体，`<div><strong>Xxx</strong></div>` 转 `### Xxx` 小标题，`<div>• xxx</div>` 转 `- xxx` 列表
+- **修改流程**：
+  1. 改 `src/lib/faq-data.ts`
+  2. 跑 `pnpm exec tsx scripts/regen-faq-md.ts` 重新生成 `public/faq.md`
+  3. 跑 `pnpm ts-check && pnpm lint` 校验
+  4. 首页 UI + JSON-LD + faq.md 三个数据源会自动保持一致
+- **历史脚本**（一次性）：
+  - `scripts/build-faq-data.ts`：从 git 历史恢复原 faq.md 内容 + 合并 12 条
+  - `scripts/regen-faq-md.ts`：从 faq-data.ts 重新生成 faq.md
+
 ## 文章板块规范
 
 - 文章内容集中维护在 `src/lib/articles.ts`，正文用 HTML 字符串存储，排版样式由 globals.css 的 `.article-content` 控制
@@ -60,6 +77,7 @@ public/                    # 静态资源 + AI 抓取内容化文件
 - 文章分类有固定配色映射（categoryColors），新增分类时需在 articles.tsx 和 articles/page.tsx 同步补色
 - 详情页输出 JSON-LD（schema.org Article）结构，利于搜索引擎与 AI 抓取
 - 新增文章后需同步更新 `public/sitemap.xml` 和 `public/llms.txt`
+- **文章 URL 唯一豁免用 ai 域**（用户给的 GEO 文章发布），其他讲内容/品牌/联系/资源全部用 www 域
 
 ## 构建与运行
 
