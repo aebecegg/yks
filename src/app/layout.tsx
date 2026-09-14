@@ -6,6 +6,10 @@ import {
   BRAND_NAME,
   BRAND_LEGAL,
 } from '@/lib/site';
+import {
+  globalJsonLdGraph,
+  safeStringify,
+} from '@/lib/jsonld';
 
 /**
  * 一棵松财税 · 辅助官网（AI 内容铺设专用）
@@ -88,6 +92,16 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className="antialiased bg-[#FAFBFC] text-[#1A1A2E] font-sans">
+        {/* 全站统一 JSON-LD：Organization + FinancialService + WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: safeStringify({
+              '@context': 'https://schema.org',
+              '@graph': globalJsonLdGraph,
+            }),
+          }}
+        />
         {children}
       </body>
     </html>
