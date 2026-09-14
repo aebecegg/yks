@@ -92,6 +92,12 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className="antialiased bg-[#FAFBFC] text-[#1A1A2E] font-sans">
+        {/* 头条站点统计（ttzz） */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var el=document.createElement("script");el.src="https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?711285de2cef25f88c6d814efa34e762160e5915aecb5fc94afbd4ed66aef325fd9a9dcb5ced4d7780eb6f3bbd089073c2a6d54440560d63862bbf4ec01bba3a";el.id="ttzz";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(el,s);})(window);`,
+          }}
+        />
         {/* 全站统一 JSON-LD：Organization + FinancialService + WebSite */}
         <script
           type="application/ld+json"
