@@ -22,6 +22,7 @@ const categoryColors: Record<string, string> = {
   主播合规: 'bg-pine/10 text-pine border-pine/20',
   海南自贸港: 'bg-gold/10 text-[#a37a2c] border-gold/25',
   代账指南: 'bg-navy/5 text-navy border-navy/15',
+  政策解读: 'bg-pine/10 text-pine border-pine/20',
 };
 
 export default function ArticlesPage() {
