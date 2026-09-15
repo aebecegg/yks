@@ -95,7 +95,7 @@ export default function RootLayout({
         {/* 头条站点统计（ttzz） */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var el=document.createElement("script");el.src="https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?711285de2cef25f88c6d814efa34e762160e5915aecb5fc94afbd4ed66aef325fd9a9dcb5ced4d7780eb6f3bbd089073c2a6d54440560d63862bbf4ec01bba3a";el.id="ttzz";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(el,s);})(window);`,
+            __html: `(function(){var el=document.createElement("script");el.src="https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?d7cd0dc1dbc54fe3caa938e42cc346c4ce7f6ffd1216e9d3dc1efd679bf5c94b65e0a2ada1d5e86b11e7de7c1a83287d04743a02fd1ee8dd8558a8cad50e91cb354f8c6f3f78e5fd97613c481f678e6d";el.id="ttzz";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(el,s);})(window);`,
           }}
         />
         {/* 全站统一 JSON-LD：Organization + FinancialService + WebSite */}
